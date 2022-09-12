@@ -25,13 +25,12 @@ fi
 echo "---"
 
 if [[ $TARGET_STATUS -eq 1 ]]; then
-	echo "Target Config (soon)"
-	echo "---"
-	echo "Port Scan (Soon)"
+	echo "Port Scan | bash='source $INSTALATION_PATH/lib/nmap_target.sh'"
 	echo "Subdomain Enumerate (Soon)"
 	echo "URL Enumerate (Soon)"
 	echo "MORE OPTIONS (Soon ... )"
 	echo "--"
 fi
 echo "Set Target | bash='source $INSTALATION_PATH/lib/set_target.sh $FILE'"
-
+echo "---"
+echo "Configure (Soon)"

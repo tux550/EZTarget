@@ -1,7 +1,7 @@
 SCRIPTS := interface_ip.5s.sh target_ping.5s.sh
 ARGOS = ~/.config/argos
 
-install: uninstall
+install:
 	cp ./bin/ezt_* $(ARGOS)
 	chmod u+x $(ARGOS)/ezt_*
 uninstall:

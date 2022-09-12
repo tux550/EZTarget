@@ -25,7 +25,12 @@ fi
 echo "---"
 
 if [[ $TARGET_STATUS -eq 1 ]]; then
-	echo "OPTIONS (Soon ... )"
+	echo "Target Config (soon)"
+	echo "---"
+	echo "Port Scan (Soon)"
+	echo "Subdomain Enumerate (Soon)"
+	echo "URL Enumerate (Soon)"
+	echo "MORE OPTIONS (Soon ... )"
 fi
 echo "Set Target | bash='source $INSTALATION_PATH/lib/set_target.sh $FILE'"
 

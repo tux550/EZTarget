@@ -36,9 +36,7 @@ if [[ $TARGET_STATUS -eq 1 ]]; then
 	echo "--Subdomains "
 	echo "--URL "
 	echo "--(Soon...)"
-	echo "---"
 fi
 echo "Target"
 echo "--Set | bash='source $INSTALATION_PATH/lib/set_target.sh $FILE'"
-#echo "---"
 #echo "Configure (Soon)"

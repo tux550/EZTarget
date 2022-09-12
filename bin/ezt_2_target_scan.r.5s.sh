@@ -38,8 +38,8 @@ if [[ $TARGET_STATUS -eq 1 ]]; then
 
 	echo "Scan"
 	echo "--Ports | bash='source $LIB_FOLDER/nmap_target.sh'"
-	echo "--Subdomains..."
-	echo "--URL..."
+	echo "--(Subdomains...)"
+	echo "--(URL...)"
 	echo "--(Soon...)"
 fi
 echo "Target"

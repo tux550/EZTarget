@@ -28,15 +28,15 @@ if [[ $TARGET_STATUS -eq 1 ]]; then
 	echo "Reports"
 	NMAP_FILE=$SCANS_FOLDER/$TARGET
 	if test -f $NMAP_FILE; then
-		echo "--Ports"
+		echo "--Ports | bash='source $LIB_FOLDER/nmap_report.sh'"
 	fi
 
 	echo "Scan"
-	echo "--Ports | bash='source $INSTALATION_PATH/lib/nmap_target.sh'"
+	echo "--Ports | bash='source $LIB_FOLDER/nmap_target.sh'"
 	echo "--Subdomains "
 	echo "--URL "
 	echo "--(Soon...)"
 fi
 echo "Target"
-echo "--Set | bash='source $INSTALATION_PATH/lib/set_target.sh $FILE'"
+echo "--Set | bash='source $LIB_FOLDER/set_target.sh $FILE'"
 #echo "Configure (Soon)"

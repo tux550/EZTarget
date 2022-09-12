@@ -27,3 +27,8 @@ LIST_INTERFACES=$(ip -o link show | awk -F': ' '{print $2}')
 while IFS= read -r line; do
 	echo "--$line | bash='echo $line > $INTERFACE_FILE' terminal=false refresh=true";
 done <<< "$LIST_INTERFACES"
+
+# Server Utilities
+echo "Host"
+echo "--Web | bash='cd $WEBROOT && python3 -m http.server $WEBPORT'"
+echo "--Nc Bind | bash='nc -lvp $NCPORT'"

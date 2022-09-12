@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-INSTALATION_PATH=$HOME/.eztarget
-FILE=$INSTALATION_PATH/target.txt
+if test -f $HOME/.eztarget/eztarget.config; then
+	source $HOME/.eztarget/eztarget.config
+fi
+
 read -p "New Target:" TARGET
-echo $TARGET > $FILE
+echo $TARGET > $TARGET_FILE
 exit

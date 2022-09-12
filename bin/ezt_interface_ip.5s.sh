@@ -23,5 +23,5 @@ fi
 echo "---"
 LIST_INTERFACES=$(ip -o link show | awk -F': ' '{print $2}')
 while IFS= read -r line; do
-	echo "$line | bash='echo $line > $FILE' terminal=false refresh=true";
+	echo "$line | bash='echo $line > $INTERFACE_FILE' terminal=false refresh=true";
 done <<< "$LIST_INTERFACES"

@@ -24,17 +24,22 @@ fi
 
 echo "---"
 
+
+
+
 if [[ $TARGET_STATUS -eq 1 ]]; then
-	echo "Reports"
+	
+	report=0;
 	NMAP_FILE=$SCANS_FOLDER/$TARGET
 	if test -f $NMAP_FILE; then
+		if report==0; then report=1; echo "Report"; fi
 		echo "--Ports | bash='source $LIB_FOLDER/nmap_report.sh'"
 	fi
 
 	echo "Scan"
 	echo "--Ports | bash='source $LIB_FOLDER/nmap_target.sh'"
-	echo "--Subdomains "
-	echo "--URL "
+	echo "--Subdomains..."
+	echo "--URL..."
 	echo "--(Soon...)"
 fi
 echo "Target"

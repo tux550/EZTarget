@@ -31,6 +31,7 @@ if [[ $TARGET_STATUS -eq 1 ]]; then
 	echo "Subdomain Enumerate (Soon)"
 	echo "URL Enumerate (Soon)"
 	echo "MORE OPTIONS (Soon ... )"
+	echo "--"
 fi
 echo "Set Target | bash='source $INSTALATION_PATH/lib/set_target.sh $FILE'"
 

@@ -5,6 +5,7 @@
 
 ## Integration
 - Nmap
+- Gobuster (v3)
 
 ## Install
 ```

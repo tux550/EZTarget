@@ -28,7 +28,6 @@ echo "---"
 
 
 if [[ $TARGET_STATUS -eq 1 ]]; then
-	
 	report=0;
 	NMAP_FILE=$SCANS_FOLDER/$TARGET
 	if test -f $NMAP_FILE; then
@@ -43,5 +42,6 @@ if [[ $TARGET_STATUS -eq 1 ]]; then
 	echo "--(Soon...)"
 fi
 echo "Target"
-echo "--Set | bash='source $LIB_FOLDER/set_target.sh $FILE'"
+echo "--Set Target | bash='source $LIB_FOLDER/set_target.sh $FILE'"
+echo "--Web Port"
 #echo "Configure (Soon)"

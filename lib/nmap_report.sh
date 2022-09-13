@@ -15,7 +15,7 @@ if [[ -n "${TARGET// /}" ]]; then
 	# REPORT NMAP
 	NMAP_FILE=$SCANS_FOLDER/nmap_$TARGET
 	if test -f $NMAP_FILE; then
-		echo "NMAP"
+		echo "PORTS (NMAP)"
 		# Clean print from grepablefile
 		# Thanks to: https://github.com/leonjza/awesome-nmap-grep
 		egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \

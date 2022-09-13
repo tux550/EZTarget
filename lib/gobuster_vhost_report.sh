@@ -13,10 +13,10 @@ fi
 # Report
 if [[ -n "${TARGET// /}" ]]; then
 	# REPORT GOBUSTER
-	GOBUSTER_DIR_FILE=$SCANS_FOLDER/gobuster_dir_$TARGET
-	if test -f $GOBUSTER_DIR_FILE; then
+	GOBUSTER_VHOST_FILE=$SCANS_FOLDER/gobuster_vhost_$TARGET
+	if test -f $GOBUSTER_VHOST_FILE; then
 		echo "GOBUSTER"
-		cat $GOBUSTER_DIR_FILE
+		cat $GOBUSTER_VHOST_FILE
 	else
 		echo "Report not found"
 	fi

@@ -35,17 +35,21 @@ if [[ $TARGET_STATUS -eq 1 ]]; then
 		if [[ $report -eq 0 ]] ; then report=1; echo "Report"; fi
 		echo "--Ports | bash='source $LIB_FOLDER/nmap_report.sh'"
 	fi
-	GOBUSTER_FILE=$SCANS_FOLDER/gobuster_dir_$TARGET
-	if test -f $GOBUSTER_FILE; then
+	GOBUSTER_DIR_FILE=$SCANS_FOLDER/gobuster_dir_$TARGET
+	if test -f $GOBUSTER_DIR_FILE; then
 		if [[ $report -eq 0 ]] ; then report=1; echo "Report"; fi
 		echo "--URLs | bash='source $LIB_FOLDER/gobuster_dir_report.sh'"
 	fi
-
+	GOBUSTER_VHOST_FILE=$SCANS_FOLDER/gobuster_vhost_$TARGET
+	if test -f $GOBUSTER_VHOST_FILE; then
+		if [[ $report -eq 0 ]] ; then report=1; echo "Report"; fi
+		echo "--Subdomains | bash='source $LIB_FOLDER/gobuster_vhost_report.sh'"
+	fi
 
 	echo "Scan"
 	echo "--Ports | bash='source $LIB_FOLDER/nmap_target.sh'"
 	echo "--URLs | bash='source $LIB_FOLDER/gobuster_dir_target.sh'"
-	echo "--(Subdomains...)"
+	echo "--Subdomains | bash='source $LIB_FOLDER/gobuster_vhost_target.sh'"
 	echo "--(Soon...)"
 fi
 

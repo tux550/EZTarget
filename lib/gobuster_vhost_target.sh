@@ -12,10 +12,10 @@ fi
 
 # Report
 if [[ -n "${TARGET// /}" ]]; then
-	GOBUSTER_DIR_FILE=$SCANS_FOLDER/gobuster_dir_$TARGET
-	if test -f $GOBUSTER_DIR_FILE; then
+	GOBUSTER_VHOST_FILE=$SCANS_FOLDER/gobuster_vhost_$TARGET
+	if test -f $GOBUSTER_VHOST_FILE; then
 		# Ask if update
-		source "$LIB_FOLDER/gobuster_dir_report.sh"
+		source "$LIB_FOLDER/gobuster_vhost_report.sh"
 		echo "Overwrite?"
 		select yn in "yes" "no"; do
 			case $yn in
@@ -35,6 +35,6 @@ if $scan; then
 	if ![[ -z "$TARGET_WEBPORT" ]]; then
 		TARGET_WEBPORT=80 
 	fi
-	$GOBUSTER_BIN dir -u http://$TARGET:$TARGET_WEBPORT -w $GOBUSTER_WORDLIST_DIR -o $GOBUSTER_DIR_FILE
+	$GOBUSTER_BIN vhost -u http://$TARGET:$TARGET_WEBPORT -w $GOBUSTER_WORDLIST_VHOST -o $GOBUSTER_VHOST_FILE
 fi
 

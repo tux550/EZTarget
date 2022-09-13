@@ -19,7 +19,7 @@ Minimal GNOME Extension with shortcuts for target scanning and pentesting utilit
 ## Requirements
 - [Argos](https://github.com/p-e-w/argos)
 - [Gobuster (v3)](https://github.com/OJ/gobuster)
-- [Nmap](https://nmap.org)
+- Nmap
 - Netcat
 - Python3
 

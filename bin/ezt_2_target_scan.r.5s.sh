@@ -30,16 +30,22 @@ echo "---"
 # Reports & Scan
 if [[ $TARGET_STATUS -eq 1 ]]; then
 	report=0;
-	NMAP_FILE=$SCANS_FOLDER/$TARGET
+	NMAP_FILE=$SCANS_FOLDER/nmap_$TARGET
 	if test -f $NMAP_FILE; then
-		if report==0; then report=1; echo "Report"; fi
+		if [[ $report -eq 0 ]] ; then report=1; echo "Report"; fi
 		echo "--Ports | bash='source $LIB_FOLDER/nmap_report.sh'"
 	fi
+	GOBUSTER_FILE=$SCANS_FOLDER/gobuster_$TARGET
+	if test -f $GOBUSTER_FILE; then
+		if [[ $report -eq 0 ]] ; then report=1; echo "Report"; fi
+		echo "--URLs | bash='source $LIB_FOLDER/gobuster_report.sh'"
+	fi
+
 
 	echo "Scan"
 	echo "--Ports | bash='source $LIB_FOLDER/nmap_target.sh'"
+	echo "--URLs | bash='source $LIB_FOLDER/gobuster_target.sh'"
 	echo "--(Subdomains...)"
-	echo "--(URL...)"
 	echo "--(Soon...)"
 fi
 

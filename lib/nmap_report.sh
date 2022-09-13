@@ -13,7 +13,7 @@ fi
 # Report
 if [[ -n "${TARGET// /}" ]]; then
 	# REPORT NMAP
-	NMAP_FILE=$SCANS_FOLDER/$TARGET
+	NMAP_FILE=$SCANS_FOLDER/nmap_$TARGET
 	if test -f $NMAP_FILE; then
 		echo "NMAP"
 		# Clean print from grepablefile

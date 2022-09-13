@@ -1,7 +1,10 @@
 # EZTarget
 
-## Prerequisites
+## Requirements
 - [Argos](https://github.com/p-e-w/argos)
+
+## Integration
+- Nmap
 
 ## Install
 ```

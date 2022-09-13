@@ -56,9 +56,3 @@ fi
 # Config
 echo "Edit"
 echo "--Target Config | bash='nano $CONFIG_TARGET'"
-
-# Config
-#echo "Target"
-#echo "--Set Target | bash='source $LIB_FOLDER/set_target.sh $FILE'"
-#echo "--Web Port"
-#echo "Configure (Soon)"

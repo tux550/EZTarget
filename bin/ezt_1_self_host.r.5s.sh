@@ -43,7 +43,7 @@ done <<< "$LIST_INTERFACES"
 
 # Host Utilities
 echo "Host"
-echo "--Shell | bash='export TARGET_IP=\"$TARGET\"; export HOST_IP=\"$HOST_IP\"; source $LIB_FOLDER/shell.sh'"
+echo "--Shell | bash='export EZTARGET=\"$TARGET\"; export EZHOST=\"$HOST_IP\"; source $LIB_FOLDER/shell.sh'"
 echo "--Web | bash='cd $HOST_WEBROOT && python3 -m http.server $HOST_WEBPORT'"
 echo "--Nc Bind | bash='nc -lvp $HOST_NCPORT'"
 

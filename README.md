@@ -6,7 +6,7 @@ Minimal GNOME Extension with shortcuts for target scanning and pentesting utilit
 
 ### Host
 - Current IP
-- Shell (with enviroment variables: HOST_IP and TARGET_IP)
+- Shell (with enviroment variables: EZHOST and EZTARGET)
 - HTTP Web Server
 - Netcat Bind
 

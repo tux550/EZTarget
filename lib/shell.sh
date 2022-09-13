@@ -149,25 +149,14 @@ center_box_top
 center_box_title "EZTarget"
 center_box_text "By: Tux550"
 center_box_divide
-if [ -z "$HOST_IP" ]; then
+if [ -z "$EZHOST" ]; then
 	center_box_text "Host: Not Set"
 else
-	center_box_text "Host: $HOST_IP"
+	center_box_text "Host: $EZHOST"
 fi
-if [ -z "$TARGET_IP" ]; then
+if [ -z "$EZTARGET" ]; then
 	center_box_text "Target: Not Set"
 else
-	center_box_text "Target: $TARGET_IP"
+	center_box_text "Target: $EZTARGET"
 fi
 center_box_bottom
-
-#echo -e "┌────────────────────────┐"
-#echo -e "│        EZTarget        │"
-#echo -e "│        ════════        │"
-#echo -e "│       By: Tux550       │"
-#echo -e "└────────────────────────┘"
-#echo
-#echo -e "HOST IP: $HOST_IP"
-#echo -e "TARGET IP"
-#echo
-

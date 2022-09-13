@@ -50,9 +50,8 @@ if [[ $TARGET_STATUS -eq 1 ]]; then
 	echo "--Ports | bash='source $LIB_FOLDER/nmap_target.sh'"
 	echo "--URIs | bash='source $LIB_FOLDER/gobuster_dir_target.sh'"
 	echo "--Subdomains | bash='source $LIB_FOLDER/gobuster_vhost_target.sh'"
-	echo "--(Soon...)"
 fi
 
 # Config
 echo "Edit"
-echo "--Target Config | bash='nano $CONFIG_TARGET'"
+echo "--Target Config | bash='nano $CONFIG_TARGET; exit'"

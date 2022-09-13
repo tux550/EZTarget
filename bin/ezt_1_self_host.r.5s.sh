@@ -50,4 +50,4 @@ echo "--Nc Bind | bash='nc -lvp $HOST_NCPORT'"
 
 # Config
 echo "Edit"
-echo "--Host Config | bash='nano $CONFIG_HOST'"
+echo "--Host Config | bash='nano $CONFIG_HOST; exit'"

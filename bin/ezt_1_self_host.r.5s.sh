@@ -33,6 +33,7 @@ fi
 echo "---"
 
 # BODY
+
 # Interface Select
 echo "Interface"
 LIST_INTERFACES=$(ip -o link show | awk -F': ' '{print $2}')
@@ -42,9 +43,10 @@ done <<< "$LIST_INTERFACES"
 
 # Host Utilities
 echo "Host"
+echo "--Shell | bash='export TARGET_IP=\"$TARGET\"; export HOST_IP=\"$HOST_IP\"'"
 echo "--Web | bash='cd $HOST_WEBROOT && python3 -m http.server $HOST_WEBPORT'"
 echo "--Nc Bind | bash='nc -lvp $HOST_NCPORT'"
-echo "--Shell | bash='export TARGET_IP=\"$TARGET\"; export HOST_IP=\"$HOST_IP\"'"
+
 
 # Config
 echo "Edit"

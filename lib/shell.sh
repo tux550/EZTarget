@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-max_cols=60
+max_cols=80
 
 center_box_title() {
 	local title edge doubleline cols extra i

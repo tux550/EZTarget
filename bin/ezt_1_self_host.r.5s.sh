@@ -12,6 +12,10 @@ fi
 if test -f $CONFIG_INTERFACE; then
 	source $CONFIG_INTERFACE
 fi
+if test -f $CONFIG_TARGET; then
+	source $CONFIG_TARGET
+fi
+
 
 # HEAD
 # Show Host IP
@@ -40,6 +44,7 @@ done <<< "$LIST_INTERFACES"
 echo "Host"
 echo "--Web | bash='cd $HOST_WEBROOT && python3 -m http.server $HOST_WEBPORT'"
 echo "--Nc Bind | bash='nc -lvp $HOST_NCPORT'"
+echo "--Shell | bash='export TARGET_IP=\"$TARGET\"; export HOST_IP=\"$HOST_IP\"'"
 
 # Config
 echo "Edit"

@@ -1,32 +1,33 @@
 #!/usr/bin/env bash
 
+# Load global configs
 if test -f $HOME/.eztarget/eztarget.config; then
 	source $HOME/.eztarget/eztarget.config
 fi
 
-TARGET_STATUS=0 #0=Not set; 1=Found; 2=Out of Reach
-if test -f $TARGET_FILE; then
-	TARGET=$(head -n 1 $TARGET_FILE)
-	if [[ -n "${TARGET// /}" ]]; then
-		if ping -c 1 -t200 $TARGET &> /dev/null; then
-			echo "Target: <span color='$SUCCESS_COLOR'><tt>$TARGET</tt></span>"
-			TARGET_STATUS=1
-		else
-			echo "Target: <span color='$FAIL_COLOR'><tt>$TARGET</tt></span>"
-			TARGET_STATUS=2
-		fi
+# Load configs
+if test -f $CONFIG_TARGET; then
+	source $CONFIG_TARGET
+fi
+
+# HEAD
+# Show Target Status
+if [[ -n "${TARGET// /}" ]]; then
+	if ping -c 1 -t200 $TARGET &> /dev/null; then
+		echo "Target: <span color='$SUCCESS_COLOR'><tt>$TARGET</tt></span>"
+		TARGET_STATUS=1
 	else
-		echo "Target: Not set"
+		echo "Target: <span color='$FAIL_COLOR'><tt>$TARGET</tt></span>"
+		TARGET_STATUS=2
 	fi
 else
-	echo "Target: Not Set"
+	echo "Target: Not set"
 fi
 
 echo "---"
 
-
-
-
+# BODY
+# Reports & Scan
 if [[ $TARGET_STATUS -eq 1 ]]; then
 	report=0;
 	NMAP_FILE=$SCANS_FOLDER/$TARGET
@@ -41,7 +42,13 @@ if [[ $TARGET_STATUS -eq 1 ]]; then
 	echo "--(URL...)"
 	echo "--(Soon...)"
 fi
-echo "Target"
-echo "--Set Target | bash='source $LIB_FOLDER/set_target.sh $FILE'"
-echo "--Web Port"
+
+# Config
+echo "Edit"
+echo "--Target Config | bash='nano $CONFIG_TARGET'"
+
+# Config
+#echo "Target"
+#echo "--Set Target | bash='source $LIB_FOLDER/set_target.sh $FILE'"
+#echo "--Web Port"
 #echo "Configure (Soon)"

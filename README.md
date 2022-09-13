@@ -1,6 +1,5 @@
 # EZTarget
 
-## Description
 Minimal GNOME Extension with shortcuts for target scanning and pentesting utilities.
 
 ## Utilities and Shortcuts

